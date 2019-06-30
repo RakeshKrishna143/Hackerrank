@@ -1,6 +1,6 @@
-a=[1,4,3,5,2]
+a=[1,4,3,5,2,6]
 a.sort()
-d=9
+d=11
 def threesum(a,d):
     k=0
     i=k+1
@@ -13,7 +13,9 @@ def threesum(a,d):
                 i+=1
             else:
                 print(a[k],a[i],a[j])
-                break
+                i+=1 
+                j-=1
         k+=1
+        i=k+1
+        j=len(a)-1
 threesum(a,d)
-        
