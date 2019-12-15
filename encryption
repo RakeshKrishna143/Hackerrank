@@ -1,0 +1,30 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the encryption function below.
+def encryption(s):
+    l=len(s)
+    a=""
+    s1=math.sqrt(l)
+    c=math.ceil(s1)
+    for i in range(c):
+        a=a+s[i:l:c]+" "
+    return(a)
+
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    result = encryption(s)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
+

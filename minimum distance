@@ -1,0 +1,33 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the minimumDistances function below.
+def minimumDistances(a):
+    count=10000000
+    for i in range(n):
+        for j in range(n):
+            if a[i]==a[j] and i!=j:
+                    count=min(count,abs(i-j))
+    if count==10000000:
+        count=-1
+    return(count)
+
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input())
+
+    a = list(map(int, input().rstrip().split()))
+
+    result = minimumDistances(a)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
+

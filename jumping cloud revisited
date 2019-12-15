@@ -1,0 +1,46 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the jumpingOnClouds function below.
+def jumpingOnClouds(c, k):
+    c.append('#')
+    a=[]
+    e=100
+    for i in range(n):
+        if i*k <=n:
+            a.append(c[i*k])
+    for x in a:
+        if x==1:
+            e-=3
+        elif x==0:
+            e-=1
+    return(e)
+
+    return(e)
+
+
+        
+
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    nk = input().split()
+
+    n = int(nk[0])
+
+    k = int(nk[1])
+
+    c = list(map(int, input().rstrip().split()))
+
+    result = jumpingOnClouds(c, k)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
+
